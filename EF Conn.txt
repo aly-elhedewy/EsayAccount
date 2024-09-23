@@ -1,0 +1,100 @@
+Scaffold-DbContext "Data Source=.;Initial Catalog=SystemDataDB;Integrated Security=True;Encrypt=False" Microsoft.EntityFrameworkCore.SqlServer -OutputDir "DAL"
+
+ملاحظه هامه جدا لازم تاخد بالك منها وانت بتصمم قاعده البيانات علشان ده بتعمل مشاكل كبيره جدا
+لازم وانت بتعمل اسماء الحقول فى قاعده البيانات يكون اول حرف كبير وكمان عدم استخدام اندرسكور _ اللى هيا ده
+
+نص اتصال جهاز الشغل
+
+Scaffold-DbContext "Data Source=DESKTOP-8FP1Q36\SQLEXPRESS;Initial Catalog=EasyAccount;Integrated Security=True;Encrypt=False" Microsoft.EntityFrameworkCore.SqlServer -OutputDir "DAL"
+Scaffold-DbContext "Data Source=DESKTOP-8FP1Q36\SQLEXPRESS;Initial Catalog=EasyAccount22;Integrated Security=True;Encrypt=False" Microsoft.EntityFrameworkCore.SqlServer -OutputDir "DAL2"
+- Branch
+- Store
+- Category
+- Product
+Id
+Code
+Name
+Qty
+IsDelete
+IsActive
+IsType
+CategoryCode
+Img
+BranchCode
+StoreCode
+Discount
+Tax
+- UnitName
+- UnitProduct
+Id
+Code
+Barcode
+Factor
+PriceBuy
+PriceSale
+ProductCode
+UnitNameCode
+
+- CustomerSupplier
+Id
+Code
+PersonType
+Name
+Address
+Tel
+Tel2
+IsDelete
+IsActive
+AccountCode
+
+- Users
+Id
+Code
+UserName
+Password
+FullName
+Tel
+Email
+Address
+IsAdmin
+BranchCode
+- Invoice 
+Id
+Code
+InvoiceNum
+OrderDate
+OrderDateAdd
+UserCode
+CustomerSupplierCode
+InvoiceType
+Total
+Pay
+Stay
+Discount
+DiscountValue
+TotalAfterDiscount
+Tax
+TaxValue
+TotalAfterTax
+BranchCode
+CashPay
+VisaPay
+- InvoiceDetails
+Id
+Num
+InvoiceCode
+ProductCode
+Price
+Qty
+Amount
+Discount
+DiscountValue
+AmountAfterDiscount
+Tax
+TaxValue
+AmountAfterTax
+UintProductCode
+Factor
+StoreCode
+
+
